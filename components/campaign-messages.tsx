@@ -32,10 +32,10 @@ const CampaignMessages: React.FC<MessagesProps> = ({
           <div className="text-left text-sm">
             Dear Ville, As the Executive Distributor at EC21, I believe our new
             Sanlo Webshop solution could be a great fit to help drive more
-            revenue and improve margins for your gaming business. Sanlo's
+            revenue and improve margins for your gaming business. Sanlo&apos;s
             plug-and-play webshop allows you to connect directly with players,
             boosting their lifetime value. And our suite of monetization tools,
-            from payments to financing, can unlock new revenue streams. I'd
+            from payments to financing, can unlock new revenue streams. I&apos;d
             welcome the chance to discuss how Sanlo could benefit EC21. Are you
             available for a quick call this week to explore the possibilities?
             Best regards, Mert Deveci GodmodeHQ
@@ -52,7 +52,7 @@ const CampaignMessages: React.FC<MessagesProps> = ({
         <Textarea
           showButton={true}
           showAvatar={true}
-          placeholder="Instruct your comments to the agent e.g. “Make it more casual”"
+          placeholder="Instruct your comments to the agent e.g. &ldquo;Make it more casual&rdquo;"
           value={currentMessage}
           onChange={handleTextareaChange}
           onKeyDown={(e) => {
