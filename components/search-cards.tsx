@@ -3,36 +3,10 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import Link from 'next/link';
-
 import { ArrowUpRight } from 'lucide-react';
-
 import { Badge } from '@/components/ui/badge';
 import { useRouter } from 'next/navigation';
-
-interface BadgeData {
-  variant:
-    | 'default'
-    | 'secondary'
-    | 'destructive'
-    | 'outline'
-    | 'linkedin'
-    | 'mail'
-    | 'company';
-  text: string;
-  icon?: React.ReactNode;
-}
-
-interface ItemData {
-  name: string;
-  icon?: React.ReactNode;
-  badges: BadgeData[];
-}
-
-interface SearchCardProps {
-  title: string;
-  items: ItemData[];
-  activeItemIndex: number;
-}
+import { SearchCardProps } from '@/lib/type';
 
 const SearchCard: React.FC<SearchCardProps> = ({
   title,

@@ -1,6 +1,7 @@
 import { Users, Mail, Globe, Building2 } from 'lucide-react';
+import { ItemData } from './type';
 
-const searchData = [
+const searchData: { title: string; items: ItemData[] }[] = [
   {
     title: 'Search people',
     items: [

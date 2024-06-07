@@ -16,6 +16,7 @@ import SearchCard from '@/components/search-cards';
 import SearchBar from '@/components/search-bar';
 import { Button } from '@/components/ui/button';
 import searchData from '@/lib/data';
+import { ItemData } from '@/lib/type';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -112,7 +113,7 @@ export default function Home() {
                 <SearchCard
                   key={cardIndex}
                   title={section.title}
-                  items={section.items}
+                  items={section.items as ItemData[]}
                   activeItemIndex={
                     activeItem && activeItem.sectionTitle === section.title
                       ? activeItem.itemIndex
