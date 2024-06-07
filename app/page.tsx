@@ -1,10 +1,15 @@
 'use client';
-
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 import { PlusIcon } from '@radix-ui/react-icons';
-import { Search, Users } from 'lucide-react';
+import {
+  Ellipsis,
+  History,
+  Users,
+  GanttChart,
+  FolderSearch,
+  AudioLines,
+} from 'lucide-react';
 
 import { Dashboard } from '@/components/dashboard';
 import SearchCard from '@/components/search-cards';
@@ -79,12 +84,16 @@ export default function Home() {
               Product managers in tech located in Milano
             </div>
           </div>
-          <div className="flex gap-x-3">
+          <div className="flex gap-x-1">
             <Button variant="ghost">Add People</Button>
             <Button variant="ghost">Edit search</Button>
             <Button variant="ghost">Share</Button>
-            <Image src="/backup.svg" width={16} height={16} alt="" />
-            <Image src="/points.svg" width={16} height={16} alt="" />
+            <Button variant="ghost" size="sm">
+              <History size={16} color="#6F6F6F" />
+            </Button>
+            <Button variant="ghost" size="sm">
+              <Ellipsis size={16} color="#6F6F6F" />
+            </Button>{' '}
           </div>
         </div>
       </header>
@@ -112,18 +121,28 @@ export default function Home() {
                 />
               ))}
             </div>
-            <div className="flex justify-end items-center gap-x-3">
+            <div className="flex justify-end items-center gap-x-1">
               <div className="flex gap-x-1.5">
-                <Image src="/align.svg" width={14} height={14} alt="" />
-                <div className="text-sm text-[#6F6F6F]">Go to agents</div>
+                <Button variant="ghost" size="sm">
+                  <GanttChart size={16} color="#6F6F6F" />
+                  <div className="text-sm text-[#6F6F6F] ml-1">
+                    Go to agents
+                  </div>
+                </Button>{' '}
               </div>
               <div className="flex gap-x-1.5">
-                <Image src="/folder.svg" width={14} height={14} alt="" />
-                <div className="text-sm text-[#6F6F6F]">Search new leads</div>
+                <Button variant="ghost" size="sm">
+                  <FolderSearch size={16} color="#6F6F6F" />
+                  <div className="text-sm text-[#6F6F6F] ml-1">
+                    Search new leads
+                  </div>
+                </Button>{' '}
               </div>
               <div className="flex gap-x-1.5">
-                <Image src="/analytics.svg" width={14} height={14} alt="" />
-                <div className="text-sm text-[#6F6F6F]">Analytics</div>
+                <Button variant="ghost" size="sm">
+                  <AudioLines size={16} color="#6F6F6F" />
+                  <div className="text-sm text-[#6F6F6F] ml-1">Analytics</div>
+                </Button>{' '}
               </div>
               <Button variant="custom" className="gap-x-1.5">
                 <PlusIcon />
