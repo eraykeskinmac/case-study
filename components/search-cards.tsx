@@ -24,7 +24,7 @@ interface BadgeData {
 
 interface ItemData {
   name: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   badges: BadgeData[];
 }
 

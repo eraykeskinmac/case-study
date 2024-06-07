@@ -1,4 +1,4 @@
-import { Building2, Globe, Mail, Users } from 'lucide-react';
+import { Users, Mail, Globe, Building2 } from 'lucide-react';
 
 const searchData = [
   {
